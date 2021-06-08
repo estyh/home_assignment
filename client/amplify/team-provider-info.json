@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-easywayclient-dev-194841-authRole",
+      "UnauthRoleArn": "arn:aws:iam::073585203691:role/amplify-easywayclient-dev-194841-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::073585203691:role/amplify-easywayclient-dev-194841-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-easywayclient-dev-194841-deployment",
+      "UnauthRoleName": "amplify-easywayclient-dev-194841-unauthRole",
+      "StackName": "amplify-easywayclient-dev-194841",
+      "StackId": "arn:aws:cloudformation:us-east-1:073585203691:stack/amplify-easywayclient-dev-194841/63e45b00-c879-11eb-a14e-0e50d4ec1ae9",
+      "AmplifyAppId": "d2wo5kj82lpstt"
+    },
+    "categories": {
+      "auth": {
+        "easywaycliente067e0a0": {}
+      }
+    }
+  }
+}
