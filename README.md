@@ -1,41 +1,20 @@
 # EasyWay Test Assignment
 
-### Objective
+> Ignore the server folder, not in use here
 
-Build a real-time chat application
+This chat room app uses the AWS Amplify framework. You will need an AWS account to run it.
 
-### Requirements
+## Instructions for use
 
-- Users can send messages and see them appear in the chat in real time (for example, in a different browser tab)
-- Users must submit a username to join
-- Users can see the entire message history after joining the chat
-- You must use node.js, react; the rest of the stack is up to you
+- cd into client folder
+- `npm i`
 
-### Bonus points (pick and choose)
+You will need to configure amplify with your credentials:
 
-- Multiple chat rooms
-- Persistent message history
-- Typescript
-- File attachments
+`amplify configure`
 
-### What's already in the project
+Once that is done, run `amplify init`
 
-We pre-installed some packages and added a few configs so you don't have to spend your time on it:
+Go ahead and run the app!
 
-- express server
-- socket.io with a working config
-- basic react app
-- webpack proxy config to prevent CORS errors
-- typescript config for the server
-- typescript, ts-node, nodemon installed
-
-### Tips
-
-- Build incrementally
-- Avoid spending too much time on setup and tooling
-
-### What we will pay attention to
-
-- How you prioritize work considering the time limitation
-- Tidiness, code structure and following best practices
-- Your choice and usage of frameworks, libraries and tooling
+`npm start`
