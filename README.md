@@ -15,6 +15,11 @@ You will need to configure amplify with your credentials:
 
 Once that is done, run `amplify init`
 
+```
+? Do you want to use an existing environment? Yes
+? Choose the environment you would like to use: dev
+```
+
 Go ahead and run the app!
 
 `npm start`
