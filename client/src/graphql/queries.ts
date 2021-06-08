@@ -2,113 +2,71 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const getUser = /* GraphQL */ `
-  query GetUser($userId: ID!) {
-    getUser(userId: $userId) {
-      userId
-      conversations {
-        items {
-          id
-          userId
-          conversationId
-          createdAt
-          updatedAt
-        }
-        nextToken
-      }
-      messages {
-        items {
-          id
-          userId
-          conversationId
-          content
-          createdAt
-          updatedAt
-        }
-        nextToken
-      }
+export const getMessage = /* GraphQL */ `
+  query GetMessage($id: ID!) {
+    getMessage(id: $id) {
+      id
+      content
+      owner
       createdAt
+      roomId
       updatedAt
     }
   }
 `;
-export const listUsers = /* GraphQL */ `
-  query ListUsers(
-    $userId: ID
-    $filter: ModelUserFilterInput
+export const listMessages = /* GraphQL */ `
+  query ListMessages(
+    $filter: ModelMessageFilterInput
     $limit: Int
     $nextToken: String
-    $sortDirection: ModelSortDirection
   ) {
-    listUsers(
-      userId: $userId
-      filter: $filter
-      limit: $limit
-      nextToken: $nextToken
-      sortDirection: $sortDirection
-    ) {
+    listMessages(filter: $filter, limit: $limit, nextToken: $nextToken) {
       items {
-        userId
-        conversations {
-          nextToken
-        }
-        messages {
-          nextToken
-        }
+        id
+        content
+        owner
         createdAt
+        roomId
         updatedAt
       }
       nextToken
     }
   }
 `;
-export const getConversation = /* GraphQL */ `
-  query GetConversation($id: ID!) {
-    getConversation(id: $id) {
+export const getRoom = /* GraphQL */ `
+  query GetRoom($id: ID!) {
+    getRoom(id: $id) {
       id
+      name
       messages {
         items {
           id
-          userId
-          conversationId
           content
+          owner
           createdAt
+          roomId
           updatedAt
         }
         nextToken
       }
-      associated {
-        items {
-          id
-          userId
-          conversationId
-          createdAt
-          updatedAt
-        }
-        nextToken
-      }
-      members
       createdAt
       updatedAt
     }
   }
 `;
-export const listConversations = /* GraphQL */ `
-  query ListConversations(
-    $filter: ModelConversationFilterInput
+export const listRooms = /* GraphQL */ `
+  query ListRooms(
+    $filter: ModelRoomFilterInput
     $limit: Int
     $nextToken: String
   ) {
-    listConversations(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    listRooms(filter: $filter, limit: $limit, nextToken: $nextToken) {
       items {
         id
+        name
         messages {
           nextToken
         }
-        associated {
-          nextToken
-        }
-        members
         createdAt
         updatedAt
       }

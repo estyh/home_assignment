@@ -2,69 +2,99 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const onCreateConvoLink = /* GraphQL */ `
-  subscription OnCreateConvoLink($userId: ID) {
-    onCreateConvoLink(userId: $userId) {
+export const onCreateMessage = /* GraphQL */ `
+  subscription OnCreateMessage {
+    onCreateMessage {
       id
-      userId
-      conversationId
-      user {
-        userId
-        conversations {
-          nextToken
+      content
+      owner
+      createdAt
+      roomId
+      updatedAt
+    }
+  }
+`;
+export const onUpdateMessage = /* GraphQL */ `
+  subscription OnUpdateMessage {
+    onUpdateMessage {
+      id
+      content
+      owner
+      createdAt
+      roomId
+      updatedAt
+    }
+  }
+`;
+export const onDeleteMessage = /* GraphQL */ `
+  subscription OnDeleteMessage {
+    onDeleteMessage {
+      id
+      content
+      owner
+      createdAt
+      roomId
+      updatedAt
+    }
+  }
+`;
+export const onCreateRoom = /* GraphQL */ `
+  subscription OnCreateRoom {
+    onCreateRoom {
+      id
+      name
+      messages {
+        items {
+          id
+          content
+          owner
+          createdAt
+          roomId
+          updatedAt
         }
-        messages {
-          nextToken
-        }
-        createdAt
-        updatedAt
-      }
-      conversation {
-        id
-        messages {
-          nextToken
-        }
-        associated {
-          nextToken
-        }
-        members
-        createdAt
-        updatedAt
+        nextToken
       }
       createdAt
       updatedAt
     }
   }
 `;
-export const onCreateMessage = /* GraphQL */ `
-  subscription OnCreateMessage($conversationId: ID) {
-    onCreateMessage(conversationId: $conversationId) {
+export const onUpdateRoom = /* GraphQL */ `
+  subscription OnUpdateRoom {
+    onUpdateRoom {
       id
-      userId
-      conversationId
-      author {
-        userId
-        conversations {
-          nextToken
+      name
+      messages {
+        items {
+          id
+          content
+          owner
+          createdAt
+          roomId
+          updatedAt
         }
-        messages {
-          nextToken
-        }
-        createdAt
-        updatedAt
+        nextToken
       }
-      content
-      conversation {
-        id
-        messages {
-          nextToken
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onDeleteRoom = /* GraphQL */ `
+  subscription OnDeleteRoom {
+    onDeleteRoom {
+      id
+      name
+      messages {
+        items {
+          id
+          content
+          owner
+          createdAt
+          roomId
+          updatedAt
         }
-        associated {
-          nextToken
-        }
-        members
-        createdAt
-        updatedAt
+        nextToken
       }
       createdAt
       updatedAt
