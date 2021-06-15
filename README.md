@@ -23,3 +23,6 @@ Once that is done, run `amplify init`
 Go ahead and run the app!
 
 `npm start`
+
+> Credit to Nader Dabit for the react components and the graphql schema
+
